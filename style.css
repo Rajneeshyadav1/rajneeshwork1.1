@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato" ,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.header{
+    height: 95vh;
+    background-image:linear-gradient(to right bottom,rgba(111, 206, 213, 0.8),rgba(40,180,131,0.8)),url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+    position: relative;
+  
+}
+
+.logo-box{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+}
+
+.logo{
+    height: 150px;
+
+}
+
+.heading-primary{
+    color: #ffffff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    
+    animation-name: moveInleft;
+    animation-duration: 5s;
+}
+
+.heading-primary-sub{
+     display:block;
+     font-size: 20px;
+     font-weight: 200;
+     letter-spacing: 17.4px;
+     animation-name: moveInright;
+     animation-duration: 4s;
+}
+
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+   
+  
+}
+
+@keyframes moveInleft{
+    0%{
+        opacity: 0;
+        transform: translate3d(-100px);
+    }
+
+    80%{
+        transform: translateX(20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes moveInright{
+    0%{
+        opacity: 0;
+        transform: translate3d(-100px);
+    }
+
+    80%{
+        transform: translateX(20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link,
+.btn:visited
+{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:20px 40px ;
+    display: inline-block;
+    border-radius: 70px;
+    transition: all .2s;
+}
+
+.btn-white{
+    background-color: seashell;
+    color: #777;
+    font-size: 20px;
+    
+    
+}
+
+.btn:active{
+    transform: translateY(-1px);
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+
+}
